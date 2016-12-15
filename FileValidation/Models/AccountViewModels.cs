@@ -82,6 +82,8 @@ namespace FileValidation.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
+        [DataType(DataType.Upload)]
+        [Display(Name = "Profile Image")]
         public HttpPostedFile ProfileImage { get; set; }
 
         public byte[] ProfileImageBytes { get; set; }
